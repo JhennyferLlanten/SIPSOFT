@@ -163,7 +163,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-        <sonar.organization>juandaruiz07</sonar.organization>
+        <sonar.organization>juandaruiz07-1</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 
