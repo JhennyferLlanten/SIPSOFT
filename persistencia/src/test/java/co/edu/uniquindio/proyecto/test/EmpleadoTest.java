@@ -1,6 +1,8 @@
 package co.edu.uniquindio.proyecto.test;
 
 
+import co.edu.uniquindio.proyecto.entidades2.Cargo;
+import co.edu.uniquindio.proyecto.entidades2.Empleado;
 import co.edu.uniquindio.proyecto.repo.CargoRepo;
 import co.edu.uniquindio.proyecto.repo.EmpleadoRepo;
 import org.junit.jupiter.api.Assertions;
@@ -34,14 +36,10 @@ public class EmpleadoTest {
         LocalDateTime fechaContratacion = LocalDateTime.now();
         String clave="222";
 
-        String idCargo = "1";
-        String descripcion = "Administrador";
-        int c = cargoRepo.guardarCargo(idCargo, descripcion);
-        if (c != 0) {
-
             int r = empleadoRepo.guardarEmpleado(cedula, direccion, nombre, fechaContratacion,clave,correo);
+
             Assertions.assertNotNull(r);
-        }
+
 
     }
 
@@ -57,7 +55,7 @@ public class EmpleadoTest {
         LocalDateTime fechaContratacion = LocalDateTime.now();
         String clave="2222";
 
-        String idCargo = "1";
+        String idCargo = "6";
         String descripcion = "Administrador";
 
         int c = cargoRepo.guardarCargo(idCargo, descripcion);
@@ -85,7 +83,7 @@ public class EmpleadoTest {
 
         Object encontrado = new Object();
 
-        String idCargo = "1";
+        String idCargo = "6";
         String descripcion = "Administrador";
         int c = cargoRepo.guardarCargo(idCargo, descripcion);
         if (c != 0) {
@@ -113,7 +111,7 @@ public class EmpleadoTest {
 
         Object encontrado = new Object();
 
-        String idCargo = "1";
+        String idCargo = "6";
         String descripcion = "Administrador";
         int c = cargoRepo.guardarCargo(idCargo, descripcion);
         if (c != 0) {

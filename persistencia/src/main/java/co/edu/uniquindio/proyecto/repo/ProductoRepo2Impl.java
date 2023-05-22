@@ -22,6 +22,7 @@ public class ProductoRepo2Impl implements ProductoRepo2 {
 
 
     @Override
+
     public Integer guardarProducto(String codigo, int cantidad, String categoria, String nombre, double precioCompra, double precioVenta) {
         int r = entityManager.createNativeQuery("INSERT INTO producto2 (codigo,cantidad,categoria,nombre,precio_compra,precio_venta) VALUES (?,?,?,?,?,?)")
                 .setParameter(1, codigo)

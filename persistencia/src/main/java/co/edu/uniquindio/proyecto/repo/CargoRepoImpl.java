@@ -16,7 +16,7 @@ import java.util.Optional;
 public class CargoRepoImpl implements CargoRepo {
 
     @PersistenceContext
-    EntityManager entityManager = null;
+    EntityManager entityManager ;
 
 
     @Override

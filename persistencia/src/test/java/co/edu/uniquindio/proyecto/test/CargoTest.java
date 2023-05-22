@@ -16,25 +16,26 @@ public class CargoTest {
     @Autowired
     private CargoRepo cargoRepo;
 
+    // Importante: No hacer las pruebas con datos registrados en la BD
+
 
     @Test
     public void guardarCargo() {
-
-        String codigo = "1";
+        int r;
+        String codigo = "6";
         String descripcion = "Administrador";
-        int r = cargoRepo.guardarCargo(codigo, descripcion);
+        r = cargoRepo.guardarCargo(codigo,descripcion);
         Assertions.assertNotNull(r);
-
     }
 
 
     @Test
     public void actualizarCargo() {
-        String codigo = "1";
+        String codigo = "6";
         String descripcion = "Administrador";
-        int r = cargoRepo.guardarCargo(codigo, descripcion);
+        int r = cargoRepo.guardarCargo("6", descripcion);
 
-        int a = cargoRepo.actualizarCargo("1", "SubAdministrador");
+        int a = cargoRepo.actualizarCargo("6", "SubAdministrador");
 
         Assertions.assertNotNull(a);
 
@@ -44,7 +45,7 @@ public class CargoTest {
     public void buscarCargo() {
 
         Object encontrado = new Object();
-        String codigo = "1";
+        String codigo = "6";
         String descripcion = "Administrador";
         int r = cargoRepo.guardarCargo(codigo, descripcion);
 
@@ -58,11 +59,11 @@ public class CargoTest {
     public void eliminarCargo(){
 
         Object encontrado = new Object();
-        String codigo = "1";
+        String codigo = "6";
         String descripcion = "Administrador";
         int r = cargoRepo.guardarCargo(codigo, descripcion);
 
-        int e= cargoRepo.eliminarCargo("1");
+        int e= cargoRepo.eliminarCargo("6");
         Assertions.assertNotNull(e);
     }
 
